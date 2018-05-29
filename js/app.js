@@ -1,4 +1,4 @@
-     let card = document.getElementsByClassName('card');
+       let card = document.getElementsByClassName('card');
     let initialDeck = [...card];
     let newDeck = document.querySelector('.deck');
 
@@ -49,18 +49,6 @@ window.onload =function(){
   startGame();
 };
 
-
-/*
- * set up the event listener for a card. If a card is clicked:
- *  - display the card's symbol (put this functionality in another function that you call from this one)
- *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
- *  - if the list already has another card, check to see if the two cards match
- *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
- *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
- *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
- *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
- */
-
 //Reset Game Function
 var startGame = function(){
   //set move counter to 0
@@ -80,7 +68,10 @@ var startGame = function(){
   clearInterval(interval);
   //reset match counter
   matchCounter=0;
-
+  //reset open cards list
+  openCards = [];  
+  //start timer on first click
+  newDeck.addEventListener('click', startTimer, {once: true});
 };
 
 //Add Open Card to Array
@@ -93,7 +84,7 @@ var addOpenCards = function(){
       match();
     }
     else {
-       setTimeout(noMatch, 1000);
+       setTimeout(noMatch, 800);
     }
    movesCounter(); 
    removeStars(); 
@@ -104,22 +95,18 @@ var addOpenCards = function(){
 var movesCounter = function(){
   moves++;
   document.querySelector('.moves').innerText = moves;
-  if(moves == 1){
-    startTimer();
-  }
 };
 
 //Remove Stars after so many moves
 var removeStars = function(){
-  if(moves > 1){
+  if(moves > 8){
      starsLeft = 2;
      star3.style.display = 'none';
-  } if (moves > 3){
-     starsLeft = 3;
+  } if (moves > 15){
+     starsLeft = 1;
      star2.style.display = 'none';
   }
 };
-
 
 //Lock Match Cards in Open 
 var match = function(){
@@ -151,6 +138,7 @@ var flipCard = function(){
     this.classList.toggle('show');
    }
 };   
+
 //Timer help courtesy of https://github.com/sandraisrael/Memory-Game-fend/blob/master/js/app.js
 let second = 0, minute = 0;
 let timer = document.querySelector(".timer");
@@ -171,14 +159,11 @@ var stopTimer = function(){
   clearInterval(interval);
 };
 
-
-
 // Loop to add event listenters
 initialDeck.forEach(function(card){
   card.addEventListener('click', flipCard);
-  card.addEventListener('click', addOpenCards);  
+  card.addEventListener('click', addOpenCards); 
 });
-
 
 restart.addEventListener('click', startGame);
 
@@ -195,4 +180,3 @@ document.querySelector('.play-again').addEventListener('click', function(){
         startGame();
    });  
 };
-
