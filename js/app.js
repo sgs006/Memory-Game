@@ -185,7 +185,7 @@ var modal = function(){
 
 document.querySelector('.final-move').innerHTML= " " + moves + " ";
 document.querySelector('.final-time').innerHTML= document.querySelector('.timer').innerHTML;
-document.getElementsByClassName('final-stars').innerHTML=" " + moves + " ";
+document.getElementsByClassName('final-stars').innerHTML=" " + stars + " ";
 };
 
 
