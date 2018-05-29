@@ -126,7 +126,6 @@ var match = function(){
     modal();
     stopTimer();
   }
-  console.log(matchCounter);
 };
 
 //Hide unmatched cards
