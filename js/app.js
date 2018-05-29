@@ -190,6 +190,9 @@ var modal = function(){
 document.querySelector('.final-move').innerHTML= " " + moves + " ";
 document.querySelector('.final-time').innerHTML= " " + document.querySelector('.timer').innerHTML + " ";
 document.querySelector('.final-stars').innerHTML= " " + starsLeft + " ";
+document.querySelector('.play-again').addEventListener('click', function(){
+        popup.classList.toggle('hide'); 
+        startGame();
+   });  
 };
-
 
