@@ -73,6 +73,8 @@ var startGame = function(){
   star3.style.display = 'inline-block';  
   star2.style.display = 'inline-block';
   //reset timer
+  second = 0;
+  minute = 0;
   timer.innerHTML = "0 mins 0 secs";
   clearInterval(interval);
   //reset match counter
