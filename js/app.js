@@ -1,4 +1,4 @@
- let card = document.getElementsByClassName('card');
+     let card = document.getElementsByClassName('card');
     let initialDeck = [...card];
     let newDeck = document.querySelector('.deck');
 
@@ -16,7 +16,8 @@
     let star2 = document.getElementById('star-2');
 
     let matchCounter;
-
+    
+    let starsLeft = 3;
   
   // Shuffle function from http://stackoverflow.com/a/2450976
   function shuffle(array) {
@@ -111,8 +112,10 @@ var movesCounter = function(){
 //Remove Stars after so many moves
 var removeStars = function(){
   if(moves > 1){
+     starsLeft = 2;
      star3.style.display = 'none';
   } if (moves > 3){
+     starsLeft = 3;
      star2.style.display = 'none';
   }
 };
@@ -185,9 +188,8 @@ var modal = function(){
  popup.classList.toggle('hide');
 
 document.querySelector('.final-move').innerHTML= " " + moves + " ";
-document.querySelector('.final-time').innerHTML= document.querySelector('.timer').innerHTML;
-document.getElementsByClassName('final-stars').innerHTML=" " + stars + " ";
+document.querySelector('.final-time').innerHTML= " " + document.querySelector('.timer').innerHTML + " ";
+document.querySelector('.final-stars').innerHTML= " " + starsLeft + " ";
 };
-
 
 
