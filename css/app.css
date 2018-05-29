@@ -51,6 +51,11 @@ h1 {
     margin: 0 0 3em;
 }
 
+.timer{
+  display:inline-block;
+  padding-left: 20px;
+}
+
 .deck .card {
     height: 125px;
     width: 125px;
@@ -89,6 +94,7 @@ h1 {
     text-align: left;
     width: 345px;
     margin-bottom: 10px;
+    
 }
 
 .score-panel .stars {
@@ -103,7 +109,37 @@ h1 {
     display: inline-block;
 }
 
+
+
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+/* Modal CSS  */
+.hide{
+  display:none;
+}
+
+.modal {
+  border: solid;
+  position: fixed;
+	top: 0;
+  overflow: auto;
+	text-align: center;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto;
+  
+  
+}
+
+.modal-content{
+  border: solid;
+  margin: 70px auto;
+  width: 70%;
+  background-color: #fefefe;
+  
+  
+  
 }
