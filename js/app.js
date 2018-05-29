@@ -1,4 +1,4 @@
-       let card = document.getElementsByClassName('card');
+    let card = document.getElementsByClassName('card');
     let initialDeck = [...card];
     let newDeck = document.querySelector('.deck');
 
