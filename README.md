@@ -3,7 +3,7 @@ Memory Game made with vanilla Javascript for Udacity program.
 
 ## Authors
 Sam Stokes - Javascript
-HTML/CSS - Udacity
+Udacity - HTML/CSS 
 
 ## License
 Free Use
