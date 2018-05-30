@@ -1,11 +1,11 @@
 # Memory Game Project
 Memory Game made with vanilla Javascript for Udacity program. 
 
-##Authors
+## Authors
 Sam Stokes - Javascript
 HTML/CSS - Udacity
 
-##License
+## License
 Free Use
 
 
