@@ -51,6 +51,7 @@ window.onload =function(){
 
 //Reset Game Function
 var startGame = function(){
+  shuffledDeck();
   //set move counter to 0
   document.querySelector('.moves').innerText = 0;
   moves=0;
