@@ -5,7 +5,7 @@
     let restart = document.querySelector('.restart');
 
     //Open Card Array
-    var openCards = [];
+    let openCards = [];
    
     //set counter for moves
     let moves = 0;
