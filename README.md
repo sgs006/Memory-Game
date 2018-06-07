@@ -11,7 +11,7 @@ Sam Stokes - Javascript
 
 Udacity - HTML/CSS 
 
-#Dependencies 
+# Dependencies 
 Font-Awesome
 Google Fonts - Coda
 
