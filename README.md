@@ -11,6 +11,10 @@ Sam Stokes - Javascript
 
 Udacity - HTML/CSS 
 
+#Dependencies 
+Font-Awesome
+Google Fonts - Coda
+
 ## License
 Free Use
 
