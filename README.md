@@ -13,6 +13,7 @@ Udacity - HTML/CSS
 
 # Dependencies 
 Font-Awesome
+
 Google Fonts - Coda
 
 ## License
